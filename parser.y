@@ -22,7 +22,7 @@ S: 'a' S           { a_count++; }   // Increment 'a' count
 int main() {
     printf("Enter a string: ");
     if (yyparse() == 0) { // Successful parsing
-        printf("The string is valid")
+        printf("The string is valid\n")
         printf("Number of 'a's: %d\n", a_count);
     } else {
         printf("Invalid string.\n");
