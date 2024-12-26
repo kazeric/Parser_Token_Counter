@@ -15,16 +15,18 @@ void yyerror(const char *s);
 
 S: 'a' S           { a_count++; }   // Increment 'a' count
 |'b' 
+| '&'
  ;                        
 
 %%
 int main() {
     printf("Enter a string: ");
-    yyparse();
-    printf("Number of 'a's: %d\n", a_count);
+    if (yyparse() == 0) { // Successful parsing
+        printf("The string is valid")
+        printf("Number of 'a's: %d\n", a_count);
+    } else {
+        printf("Invalid string.\n");
+    }
     return 0;
 }
-
-void yyerror(const char *s) {
-    fprintf(stderr, "Error: %s\n", s);
-}
+void yyerror(const char *s) {}
