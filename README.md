@@ -69,6 +69,6 @@ gcc lex.yy.c parser.tab.c -o parser
 ### Enter a string when prompted:
 
 
-Enter a string: aab
+Enter a string: aab&
 
 Number of 'a's: 2
